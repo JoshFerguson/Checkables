@@ -1,0 +1,219 @@
+/* ================================================================================= */
+/* ========= BEGIN Checkables Framework (some tinkering may be needed) ============= */
+/* ================================================================================= */
+[data-checkable]{
+	border: 2px solid #6690fc; /* Default Border */
+	background-color: #ffffff; /* Default Background Color */
+	color: #6690fc;            /* Default Text Color */
+}
+
+[data-checkable]{
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	height: 14px;
+	width: 14px;
+}
+
+[data-checkable-size="lg"]{
+	width: 20px;
+	height: 20px; 
+}
+
+[data-checkable] > input{
+	position: absolute;
+	cursor: pointer;
+	left: -1px;
+	top:  -3px;
+	opacity: 0;
+	z-index: 2;
+}
+[data-checkable-size="lg"] > input{
+	left: -2px;
+    top: -1px;
+    width: 100%;
+    height: 100%;
+}
+
+[data-checkable] > i{
+	background: transparent;
+	border-color: inherit;
+	border-style: solid;
+	position: absolute;
+	display: none;
+	z-index: 0;
+}
+
+[data-checkable="radio"]{
+	border-radius: 100px;
+}
+
+[data-checkable="radio"] > input:checked ~ i{
+	border-radius: 100px;
+	border-width: 5px;
+	display: block;
+	height: 0px;
+	width: 0px;
+	left: 2px;
+	top: 2px;
+}
+
+[data-checkable="radio"][data-checkable-size="lg"] > input:checked ~ i{
+	border-width: 7px;
+	left: 3px;
+	top: 3px;	
+}
+
+[data-checkable="checkbox"] > input:checked ~ i{
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	border-radius: 1px;
+	border-width: 3px;
+	border-left: none;
+	border-top: none;
+	display: block;
+	height: 9px;
+	width: 5px;
+	left: 3px;
+	top: 0px;
+}
+
+[data-checkable="checkbox"][data-checkable-size="lg"]> input:checked ~ i{
+	height: 12px;
+    width: 7px;
+    left: 5px;
+}
+
+[data-checkable^="select"]{
+	padding-right: 10px;
+	margin-top: -3px;
+	height: 20px;
+	width: auto;
+}
+
+[data-checkable^="select"][data-checkable-size="lg"]{
+	height: 24px;
+}
+
+[data-checkable^="select"] > select{
+	background-color: transparent;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	margin-top: -1px;
+	font-weight: 600;
+	padding: 0px 5px;
+	cursor: pointer;
+	display: block;
+	color: inherit;
+	height: 100%;
+	width: 100%;
+	border: 0px;
+}
+
+[data-checkable^="select"] > select:focus{
+	outline: none;
+}
+
+[data-checkable^="select"][data-checkable-size="lg"] > select{
+	height: 24px;
+	font-size: 14px;
+}
+
+[data-checkable^="select"] > i{
+	position: absolute;
+	display: block;
+	border: none;
+	height: 100%;
+	width: 12px;
+	right: 0px;
+	top: 0px;
+}
+
+[data-checkable^="select"] > i:before{
+	position: absolute;
+	content: '\25CA';
+	font-size: 13px;
+	display: block;
+	color: inherit;
+	right: 4px;
+	top: 3px;
+}
+
+[data-checkable^="select"][data-checkable-size="lg"] > i:before{
+	font-size: 15px;
+	right: 3px;
+	top: 4px;
+}
+
+[data-checkable="select-js"] > .clicker{
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	display: block;
+	cursor: pointer;
+	position: absolute;
+}
+
+[data-checkable="select-js"] > ul{
+	background-color: inherit;
+	transition: all 0s ease;
+	position: absolute;
+	overflow: hidden;
+	border: inherit;
+	font-size: 12px;
+	display: none;
+	z-index: 999;
+	height: auto;
+	padding: 0px;
+	width: 100%;
+	margin: 0px;
+	left: -2px;
+	top: 20px;
+}
+
+[data-checkable="select-js"][data-checkable-size="lg"] > ul{
+	top: 24px;
+}
+
+[data-checkable="select-js"] > ul li{
+	position: relative;
+	display: block;
+	height: 12px;
+	padding: 6px;
+}
+[data-checkable="select-js"] > ul li.selected{
+	background-color: #f0f0f0;
+}
+[data-checkable="select-js"] > ul li.selected:hover{
+	background-color: #f0f0f0;
+	color: inherit;
+}
+[data-checkable="select-js"] > ul li.selected:before{
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	border-color: inherit;
+	position: absolute;
+	border: 5px solid;
+	content: "";
+	height: 0px;
+	width: 0px;
+	left: -8px;
+	top: 7px;
+}
+
+[data-checkable="select-js"][data-checkable-size="lg"] > ul li{
+	height: 15px;
+	padding: 7px;
+}
+
+[data-checkable="select-js"] li:hover{
+	background-color: #6690fc;
+	cursor: pointer;
+	color: #ffffff;
+}
+/* ================================================================================= */
+/* ============================ END Checkables Framework =========================== */
+/* ================================================================================= */

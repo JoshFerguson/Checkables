@@ -1,0 +1,297 @@
+<html>
+	<head>
+<link rel="stylesheet" href="checkables.css" type="text/css" />
+<title>Checkable's</title>
+<style>
+	/* For example only */
+	body{
+		font-family: sans-serif;
+		padding-bottom: 200px;
+	}
+	.preview{
+		width: 80%;
+		padding: 20px;
+		border: 1px solid silver;
+		margin: 40px auto;
+		position: relative;
+		border-radius: 2px;
+	}
+	.preview > h2{
+		position: absolute;
+		left: 40px;
+		top: -34px;
+		background: #ffffff;
+		padding: 0px 20px;
+	}
+	
+	code{
+		background: #f4f4f4;
+		padding: 4px;
+		line-height: 28px;
+		border: 1px silver solid;
+		vertical-align: middle;
+		border-radius: 2px;
+	}
+	code.css{
+		background-color: #eeeeee;
+		border-color: #dddddd;
+		color: #cc1616;
+		position: relative;
+		margin-top: 10px;
+		display: block;
+	}
+	code.css:before{
+		content: "The CSS";
+		position: absolute;
+		top: -22px;
+		left: 8px;
+		background: #ffffff;
+		color: black;
+		border: 1px black solid;
+		padding: 0px 4px;
+	}
+	
+	p{
+		text-align: center;
+		font-size: 20px;
+		font-weight: 300;
+		padding-top: 20px;
+	}
+	
+	.cta{
+		display: block;
+		margin: 0px auto;
+		margin-top: 40px;
+		width: 200px;
+		text-align: center;
+		text-decoration: none;
+		border: 1px #6790fc solid;
+		color: #6790fc;
+		text-transform: uppercase;
+		padding: 10px;
+		border-radius: 2px;
+		position: relative;
+	}
+	.cta:hover{
+		background: #6790fc;
+		color: #ffffff;
+	}
+	
+	.cta sup{
+		font-size: 9px;
+		padding-left: 5px;
+		color: orange;
+	}
+	
+	.cta:hover sup{
+		color: white;
+	}
+	
+	[data-checkable="radio"],[data-checkable="checkbox"]{
+		margin-top: 4px;
+	}
+	
+	/* For example only */
+	
+	
+	/* Customize the Look */
+	.custom-style-1{
+		background-color: white;
+		border-color: orange;
+		color: orange;
+	}
+	
+	.custom-style-2{
+		background-color: white;
+		border-color: #34495e;
+		color: #2ecc71;
+	}
+	.custom-style-2 i{
+		border-color: #2ecc71;
+	}
+	/* Customize the Look */
+	
+</style>
+	</head>
+<body>
+
+<p>We all know how annoying it is to style custom checkboxes, radio buttons, and select boxes.<br /> <strong>Not Anymore!</strong> <br />Click [GET THE CSS] and add it to your stylesheet. Then copy the html markup below and add it to your page.</p>
+
+<a href="checkables.css" class="cta" target="_blank">get the css</a>
+
+<br />
+
+
+<div class="preview">
+	<h2>Default</h2>
+	<label>
+		<span>Radio &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		<span data-checkable="radio"><input type="radio" name="r1"><i></i></span>
+	</label>
+	
+	<code>&lt;span data-checkable=&quot;radio&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;r1&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</code>
+	
+	<br /><br />
+	
+	<label>
+		<span>Checkbox</span>
+		<span data-checkable="checkbox"><input type="checkbox" name="r2"><i></i></span>
+	</label>
+	
+	<code>&lt;span data-checkable=&quot;checkbox&quot;&gt;&lt;input type=&quot;checkbox&quot; name=&quot;r2&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</code>
+	
+	
+	<br /><br />
+	
+	<label>
+		<span>Select&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		<span data-checkable="select"><select>
+			<option>Option #1's title here</option>
+			<option>Option #2's title here</option>
+		</select><i></i></span>
+	</label>
+	
+	<br /><br />
+	<code>&lt;span data-checkable=&quot;select&quot;&gt;&lt;select&gt;<br />
+			&lt;option&gt;Option #1&#39;s title here&lt;/option&gt;<br />
+			&lt;option&gt;Option #2&#39;s title here&lt;/option&gt;<br />
+		&lt;/select&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</code>
+		
+	<br /><br />	
+	<code class="css">[data-checkable]{ background-color: white; border: 2px solid #6690fc; color: #6690fc; }</code>	
+	
+</div>
+
+
+
+
+<div class="preview">
+	<h2>Example Style #1</h2>
+	<label>
+		<span>Radio &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		<span class="custom-style-1" data-checkable="radio"><input type="radio" name="r1"><i></i></span>
+	</label>
+	
+	<code>&lt;span class=&quot;custom-style-1&quot; data-checkable=&quot;radio&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;r1&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</code>
+	
+	<br /><br />
+	
+	<label>
+		<span>Checkbox</span>
+		<span class="custom-style-1" data-checkable="checkbox"><input type="checkbox" name="r2"><i></i></span>
+	</label>
+	
+	<code>&lt;span class=&quot;custom-style-1&quot; data-checkable=&quot;checkbox&quot;&gt;&lt;input type=&quot;checkbox&quot; name=&quot;r2&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</code>
+	
+	
+	<br /><br />
+	
+	<label>
+		<span>Select&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		<span class="custom-style-1" data-checkable="select"><select>
+			<option>Option #1's title here</option>
+			<option>Option #2's title here</option>
+		</select><i></i></span>
+	</label>
+	
+	<br /><br />
+	<code>&lt;span class=&quot;custom-style-1&quot; data-checkable=&quot;select&quot;&gt;&lt;select&gt;<br />
+			&lt;option&gt;Option #1&#39;s title here&lt;/option&gt;<br />
+			&lt;option&gt;Option #2&#39;s title here&lt;/option&gt;<br />
+		&lt;/select&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</code>
+		
+	<br /><br />	
+	<code class="css">.custom-style-1{ background-color: white; border-color: orange; color: orange; }</code>	
+	
+</div>
+
+
+<div class="preview">
+	<h2>Example Style #2</h2>
+	<label>
+		<span>Radio &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		<span class="custom-style-2" data-checkable="radio" data-checkable-size="lg"><input type="radio" name="r1"><i></i></span>
+	</label>
+	
+	<code>&lt;span class=&quot;custom-style-2&quot; data-checkable-size=&quot;lg&quot; data-checkable=&quot;radio&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;r1&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</code>
+	
+	<br /><br />
+	
+	<label>
+		<span>Checkbox</span>
+		<span class="custom-style-2" data-checkable="checkbox" data-checkable-size="lg"><input type="checkbox" name="r2"><i></i></span>
+	</label>
+	
+	<code>&lt;span class=&quot;custom-style-2&quot; data-checkable-size=&quot;lg&quot; data-checkable=&quot;checkbox&quot;&gt;&lt;input type=&quot;checkbox&quot; name=&quot;r2&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</code>
+	
+	
+	<br /><br />
+	
+	<label>
+		<span>Select&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		<span class="custom-style-2" data-checkable="select" data-checkable-size="lg"><select>
+			<option>Option #1's title here</option>
+			<option>Option #2's title here</option>
+		</select><i></i></span>
+	</label>
+	
+	<br /><br />
+	<code>&lt;span class=&quot;custom-style-2&quot;  data-checkable-size=&quot;lg&quot; data-checkable=&quot;select&quot;&gt;&lt;select&gt;<br />
+			&lt;option&gt;Option #1&#39;s title here&lt;/option&gt;<br />
+			&lt;option&gt;Option #2&#39;s title here&lt;/option&gt;<br />
+		&lt;/select&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</code>
+		
+	<br /><br />	
+	<code class="css">.custom-style-1{ background-color: white; border-color: darkblue; color: green; } .custom-style-2 i{ border-color: green; }</code>	
+	
+</div>
+
+<hr />
+
+<p>By using the javascript addition you gain the ability to customize the full select dropdown.<br />Click [GET THE JS] and add it to the bottom of your page. Then copy the html markup below and add it where you need it.</p>
+<a href="checkables.min.js" class="cta" target="_blank">get the Js<sup>beta</sup></a>
+<div class="preview">
+	<h2>Select Using JS. <sup>BETA</sup></h2>
+	<br />
+	
+	<label>
+		<span>Select&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		<span data-checkable="select-js"><select>
+			<option>Option #1</option>
+			<option>Option #2</option>
+			<option>Option #3</option>
+			<option>Option #4</option>
+			<option>Option #5</option>
+			<option>Option #6</option>
+			<option>Option #7</option>
+			<option>Option #8</option>
+			<option>Option #9</option>
+			<option>Option #10</option>
+		</select><i></i></span>
+	</label>
+	
+	<label>
+		<span>&nbsp;&nbsp;&nbsp;&nbsp;1-3&nbsp;&nbsp;</span>
+		<span data-checkable="select-js" class="fixed-width-select"><select>
+			<option>01</option>
+			<option>02</option>
+			<option>03</option>
+		</select><i></i></span>
+	</label>
+	
+	<br /><br />
+	<code>&lt;span data-checkable=&quot;select-js&quot;&gt;&lt;select&gt;<br />
+			&lt;option&gt;Option #1&#39;s title here&lt;/option&gt;<br />
+			&lt;option&gt;Option #2&#39;s title here&lt;/option&gt;<br />
+		&lt;/select&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;</code>
+		
+	<br /><br />	
+	<code class="css">[data-checkable]{ background-color: white; border: 2px solid #6690fc; color: #6690fc; } <br /> [data-checkable] li:hover{ background-color: #6690fc; color: #ffffff; }</code>
+	
+	
+</div>
+
+
+<script src="checkables.js"></script>
+</body>
+</html>
