@@ -98,8 +98,15 @@
 
 [data-checkable^="select"] > select{
 	background-color: transparent;
+	-webkit-user-select: none;
+	-moz-user-select: -moz-none;
+	-ms-user-select: none;
+	user-select: none;
+	
 	-webkit-appearance: none;
-	-moz-appearance: none;
+	-moz-appearance: radio-container;
+	appearance: none;
+	appearance: none;
 	margin-top: -1px;
 	font-weight: 600;
 	padding: 0px 5px;
